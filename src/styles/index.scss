@@ -1,0 +1,54 @@
+#app{
+    color:#17a2b8;
+}
+.mainHeader{
+  height: 750px; 
+  padding-top: 150px;
+  background: linear-gradient(#AF7DAE, transparent 30%),
+    linear-gradient(0deg, #fff, transparent 40%),
+    #bbe7f8 url("../img/miami.jpg") no-repeat center;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+.name{
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 0.045em;
+    font-weight: 200;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+    
+}
+.profileimg{
+    margin-top: 40px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.top{
+    position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.subtext{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.9rem;
+}
+.card-img-top{
+    transition: transform .2s; 
+   height: 185px;
+}
+.card-img-top:hover{
+    transform: scale(1.05);
+}
+.frontlead{
+    letter-spacing: 2px;
+    font-size: 3rem;
+    
+}
