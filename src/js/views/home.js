@@ -54,7 +54,7 @@ export class Home extends React.Component {
 										href="https://github.com/angelo-martinez/todoapp"
 										color="info"
 										className="mr-1">
-										Github Repo
+										Github Repo test?
 									</Button>
 									<Button outline color="info">
 										Live Demo
