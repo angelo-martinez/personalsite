@@ -1,6 +1,25 @@
 import React from "react";
 //Reacstrap imports
-import { Button, Card, CardTitle, CardText, CardImg, CardBody, Container, Row, Col } from "reactstrap";
+import {
+	Button,
+	Card,
+	CardTitle,
+	CardText,
+	CardImg,
+	CardBody,
+	Container,
+	Row,
+	Col,
+	Modal,
+	ModalHeader,
+	ModalBody,
+	ModalFooter,
+	Form,
+	FormGroup,
+	Label,
+	Input,
+	FormText
+} from "reactstrap";
 // image imports
 import ReactCloset from "../../img/react-closet.png";
 import toDo from "../../img/to-do.png";
@@ -8,6 +27,20 @@ import profile from "../../img/profile.jpg";
 import meetup from "../../img/meetup.png";
 
 export class Home extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			modal: false
+		};
+
+		this.toggle = this.toggle.bind(this);
+	}
+
+	toggle() {
+		this.setState(prevState => ({
+			modal: !prevState.modal
+		}));
+	}
 	render() {
 		return (
 			<div>
@@ -32,13 +65,33 @@ export class Home extends React.Component {
 							<i className="fab fa-github mr-1" />
 							Github
 						</Button>{" "}
-						<Button outline href="https://twitter.com/Angelocodes" color="info" className="mr-2">
+						<Button outline color="info" className="mr-2" onClick={this.toggle}>
 							<i className="fas fa-phone mr-1" />
 							Contact
 						</Button>{" "}
 					</div>
 					<h1 className="frontlead mt-2 mb-5"> {"<Projects />"} </h1>
 				</div>
+				<Modal isOpen={this.state.modal} toggle={this.toggle}>
+					<ModalHeader toggle={this.toggle}>Contact Me</ModalHeader>
+					<ModalBody>
+						<Form>
+							<FormGroup>
+								<Label for="email">Email</Label>
+								<Input type="email" name="email" id="email" placeholder="your@email" />
+							</FormGroup>
+							<FormGroup>
+								<Label for="text">Text Area</Label>
+								<Input type="textarea" name="text" id="text" />
+							</FormGroup>
+						</Form>
+					</ModalBody>
+					<ModalFooter>
+						<Button outline color="info" onClick={this.toggle}>
+							Send me an Email
+						</Button>
+					</ModalFooter>
+				</Modal>
 				<Container className="mb-2">
 					<Row>
 						<Col>
@@ -54,7 +107,7 @@ export class Home extends React.Component {
 										href="https://github.com/angelo-martinez/todoapp"
 										color="info"
 										className="mr-1">
-										Github Repo test?
+										Github Repo
 									</Button>
 									<Button outline color="info">
 										Live Demo
