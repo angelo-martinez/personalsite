@@ -44,13 +44,15 @@ export class Home extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="mainHeader">
+				<header className="header">
 					<div className="top">
 						<img src={profile} className="profileimg" />
 						<span className="name">Angelo Martinez</span>
 					</div>
-					<h1 className="subtext">{"<ReactJS Developer />"}</h1>
-				</div>
+					<div className="textbox">
+						<h1 className="heading-primary">{"<ReactJS Dev />"}</h1>
+					</div>
+				</header>
 				<div style={{ textAlign: "center" }} className="mt-3">
 					<div style={{ display: "inline-block" }} className="mb-1">
 						<Button outline href="https://www.w3schools.com" color="info" className="mr-2">

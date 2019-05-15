@@ -1,13 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 #app{
     color:#17a2b8;
 }
-.mainHeader{
+.header{
   height: 91vh; 
-  background: linear-gradient(#AF7DAE, transparent 30%),
-    linear-gradient(0deg, #fff, transparent 40%),
-    #bbe7f8 url("../img/miami.jpg") no-repeat center;
+  background-image: linear-gradient( 
+        rgba(137, 18, 195, 0.14), 
+        rgba(31, 165, 186, 0.43) ) , 
+    url(../img/miami.jpg);
     background-size: cover;
-    text-align: center;
+    background-position: top;
     position: relative;
 }
 .name{
@@ -17,6 +23,7 @@
     font-weight: 200;
     border-bottom: 2px solid;
     padding-bottom: 10px;
+    animation: lightUp 1.2s ease-in;
     
 }
 .profileimg{
@@ -25,19 +32,28 @@
     height: 150px;
     border-radius: 50%;
     border: 3px solid white;
+    animation: moveInTop 1.2s ease-out;
 }
 .top{
     position: absolute;
   top: 8px;
   left: 16px;
+  backface-visibility: hidden;
 }
-.subtext{
-    color: white;
+.textbox{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3.9rem;
+    backface-visibility: hidden;
+   
+}
+.heading-primary{
+    color: white;
+    font-size: 50px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    animation: moveInLeft 1.2s ease-out;
 }
 .card-img-top{
     transition: transform .2s; 
@@ -50,4 +66,40 @@
     letter-spacing: 2px;
     font-size: 3rem;
     
+}
+
+@keyframes moveInLeft {
+    0%{
+     opacity: 0;  
+     transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+       opacity: 1; 
+       transform: translate(0);
+    }
+}
+@keyframes moveInTop {
+    0%{
+     opacity: 0;  
+     transform: translateY(-100px);
+    }
+    80%{
+        transform: translateY(10px);
+    }
+    100%{
+       opacity: 1; 
+       transform: translate(0);
+    }
+}
+@keyframes lightUp {
+    0%{
+     opacity: 0;  
+    
+    }
+    100%{
+       opacity: 1; 
+    }
 }
