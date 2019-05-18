@@ -1,0 +1,69 @@
+.header{
+  height: 90vh; 
+  background-image: linear-gradient( 
+        rgba($color-purple, 0.14), 
+        rgba($color-primary, 0.43) ) , 
+    url(../img/miami.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    
+    &--name{
+        color: white;
+        font-size: 3rem;
+        letter-spacing: 0.045em;
+        font-weight: 200;
+        border-bottom: .2rem solid;
+        padding-bottom: 1rem;
+        animation: lightUp 1.2s ease-in;
+        
+    }
+    
+    &--profileimg{
+        margin-top: 40px;
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        border: .3rem solid white;
+        animation: moveInTop 1.2s ease-out;
+    }
+    
+    &--top{
+        position: absolute;
+      top: .8rem;
+      left: 1.6rem;
+      backface-visibility: hidden;
+    }
+    
+    &--textbox{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        backface-visibility: hidden;
+       
+    }
+    
+    &--heading-primary{
+        color: white;
+        font-size: 5rem;
+        font-weight: 200;
+        letter-spacing: .5rem;
+        animation: moveInLeft 1.2s ease-out;
+    }
+    
+    &--sub{
+        height: 10vh; 
+        position: relative;
+        
+        &--center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+            
+            }
+    }
+}
