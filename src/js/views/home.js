@@ -43,37 +43,46 @@ export class Home extends React.Component {
 	}
 	render() {
 		return (
-			<div>
+			<div className="text-center">
 				<header className="header">
-					<div className="top">
-						<img src={profile} className="profileimg" />
-						<span className="name">Angelo Martinez</span>
+					<div className="header--top">
+						<img src={profile} className="header--profileimg" />
+						<span className="header--name">Angelo Martinez</span>
 					</div>
-					<div className="textbox">
-						<h1 className="heading-primary">{"<ReactJS Dev />"}</h1>
+					<div className="header--textbox">
+						<h1 className="header--heading-primary">Front-End Dev</h1>
 					</div>
 				</header>
-				<div style={{ textAlign: "center" }} className="mt-3">
-					<div style={{ display: "inline-block" }} className="mb-1">
-						<Button outline href="https://www.w3schools.com" color="info" className="mr-2">
+				<div className="header--sub">
+					<div className="header--sub--center">
+						<a
+							href="https://docs.google.com/document/d/16etI0mQeENXcUXcjRM8BnDYfg62afYpI7mk5GjqsfjU/edit?usp=sharing"
+							className="mr-2 button button--primary button--animated">
 							<i className="far fa-file mr-1" />
 							Resume
-						</Button>{" "}
-						<Button outline href="https://twitter.com/Angelocodes" color="info" className="mr-2">
+						</a>
+						<a
+							href="https://twitter.com/Angelocodes"
+							className="mr-2 button button--primary button--animated">
 							<i className="fab fa-twitter mr-1" />
 							Twitter
-						</Button>{" "}
-						<Button outline href="https://github.com/angelo-martinez" color="info" className="mr-2">
+						</a>
+						<a href="#" className="mr-2 button button--primary button--animated">
+							Center Button
+						</a>
+						<a
+							href="https://github.com/angelo-martinez"
+							className="mr-2 button button--primary button--animated">
 							<i className="fab fa-github mr-1" />
 							Github
-						</Button>{" "}
-						<Button outline color="info" className="mr-2" onClick={this.toggle}>
+						</a>
+						<a href="#" className="button button--primary button--animated" onClick={this.toggle}>
 							<i className="fas fa-phone mr-1" />
 							Contact
-						</Button>{" "}
+						</a>
 					</div>
-					<h1 className="frontlead mt-2 mb-5"> {"<Projects />"} </h1>
 				</div>
+				<h1 className="frontlead mt-2 mb-5">Projects</h1>
 				<Modal isOpen={this.state.modal} toggle={this.toggle}>
 					<ModalHeader toggle={this.toggle}>Contact Me</ModalHeader>
 					<ModalBody>
