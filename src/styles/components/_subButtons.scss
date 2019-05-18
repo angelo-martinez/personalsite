@@ -49,8 +49,18 @@
         transition: all .4s;
     }
     &--animated {
-       animation: moveInButton .5s ease-out .75s;
+       animation: moveInButton .5s ease-out 1s;
        animation-fill-mode: backwards;
+       
+       &--left{
+           animation: moveInButtonLeft .5s ease-out .75s;
+           animation-fill-mode: backwards;
+       }
+       
+       &--right{
+           animation: moveInButtonRight .5s ease-out .75s;
+           animation-fill-mode: backwards;
+       }
     }
     
 }

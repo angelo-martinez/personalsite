@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
+import { AboutMe } from "./views/me";
 import injectContext from "./store/appContext";
 
 //create your first component
@@ -18,6 +19,7 @@ export class Layout extends React.Component {
 					<ScrollToTop>
 						<Switch>
 							<Route exact path="/" component={Home} />
+							<Route exact path="/about" component={AboutMe} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 					</ScrollToTop>

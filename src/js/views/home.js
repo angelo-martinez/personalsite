@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 //Reacstrap imports
 import {
 	Button,
@@ -54,28 +55,26 @@ export class Home extends React.Component {
 					<div className="header--sub--center">
 						<a
 							href="https://docs.google.com/document/d/16etI0mQeENXcUXcjRM8BnDYfg62afYpI7mk5GjqsfjU/edit?usp=sharing"
-							className="mr-2 button button--primary button--animated">
-							<i className="far fa-file mr-1" />
-							Resume
+							className="mr-2 button button--primary button--animated--left">
+							📂 Resume
 						</a>
 						<a
 							href="https://twitter.com/Angelocodes"
-							className="mr-2 button button--primary button--animated">
-							<i className="fab fa-twitter mr-1" />
-							Twitter
+							className="mr-2 button button--primary button--animated--left">
+							🐦 Twitter
 						</a>
-						<a href="#" className="mr-2 button button--primary button--animated">
-							Center Button
-						</a>
+						<Link to="/about">
+							<a href="#" className="mr-2 button button--primary button--animated">
+								👀 About Me
+							</a>
+						</Link>
 						<a
 							href="https://github.com/angelo-martinez"
-							className="mr-2 button button--primary button--animated">
-							<i className="fab fa-github mr-1" />
-							Github
+							className="mr-2 button button--primary button--animated--right">
+							😺 Github
 						</a>
-						<a href="#" className="button button--primary button--animated" onClick={this.toggle}>
-							<i className="fas fa-phone mr-1" />
-							Contact
+						<a href="#" className="button button--primary button--animated--right" onClick={this.toggle}>
+							📱 Contact
 						</a>
 					</div>
 				</div>
