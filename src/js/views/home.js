@@ -8,8 +8,6 @@ import {
 	CardImg,
 	CardBody,
 	Container,
-	Row,
-	Col,
 	Modal,
 	ModalHeader,
 	ModalBody,
@@ -17,8 +15,7 @@ import {
 	Form,
 	FormGroup,
 	Label,
-	Input,
-	FormText
+	Input
 } from "reactstrap";
 // image imports
 import ReactCloset from "../../img/react-closet.png";
@@ -103,9 +100,9 @@ export class Home extends React.Component {
 						</Button>
 					</ModalFooter>
 				</Modal>
-				<Container className="mb-2">
-					<Row>
-						<Col>
+				<Container fluid className="mb-4">
+					<div className="rowp">
+						<div className="colp-1-of-3">
 							<Card>
 								<CardImg top width="100%" src={toDo} alt="Todo App Thumbnail" />
 								<CardBody>
@@ -125,8 +122,8 @@ export class Home extends React.Component {
 									</Button>
 								</CardBody>
 							</Card>
-						</Col>
-						<Col>
+						</div>
+						<div className="colp-1-of-3">
 							<Card>
 								<CardImg top width="100%" src={ReactCloset} alt="React Closet Thumbnail" />
 								<CardBody>
@@ -146,8 +143,8 @@ export class Home extends React.Component {
 									</Button>
 								</CardBody>
 							</Card>
-						</Col>
-						<Col>
+						</div>
+						<div className="colp-1-of-3">
 							<Card>
 								<CardImg top width="100%" src={meetup} alt="Meetup Clone Thumbnail" />
 								<CardBody>
@@ -163,8 +160,8 @@ export class Home extends React.Component {
 									</Button>
 								</CardBody>
 							</Card>
-						</Col>
-					</Row>
+						</div>
+					</div>
 				</Container>
 			</div>
 		);

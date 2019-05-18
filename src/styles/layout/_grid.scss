@@ -1,0 +1,24 @@
+.rowp {
+    max-width: $grid-width;
+    margin: 0 auto;
+    
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    @include clearfix;
+
+    [class^="colp-"] {
+        background-color: orange;
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+    .colp-1-of-3 {
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+
+    }
+}
