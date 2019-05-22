@@ -18,11 +18,12 @@ import {
 	Label,
 	Input
 } from "reactstrap";
+
 // image imports
-import ReactCloset from "../../img/react-closet.png";
-import toDo from "../../img/to-do.png";
-import profile from "../../img/profile.jpg";
-import meetup from "../../img/meetup.png";
+import ReactCloset from "../../img/react-closet_opt.png";
+import toDo from "../../img/to-do_opt.png";
+import profile from "../../img/profile_opt.jpg";
+import meetup from "../../img/meetup_opt.png";
 
 export class Home extends React.Component {
 	constructor(props) {
