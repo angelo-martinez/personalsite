@@ -1,9 +1,12 @@
-body{
-    color: $color-primary;
+body {
+  color: $color-primary;
 }
 
-.frontlead{
-    letter-spacing: .2rem;
-    font-size: 4rem;
-    
+.frontlead {
+  letter-spacing: 0.2rem;
+  font-size: 5rem;
+  letter-spacing: 0.045em;
+  font-weight: 150;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
 }

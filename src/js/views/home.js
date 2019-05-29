@@ -3,11 +3,6 @@ import { Link } from "react-router-dom";
 //Reacstrap imports
 import {
 	Button,
-	Card,
-	CardTitle,
-	CardText,
-	CardImg,
-	CardBody,
 	Container,
 	Modal,
 	ModalHeader,
@@ -79,7 +74,7 @@ export class Home extends React.Component {
 						</a>
 					</div>
 				</div>
-				<h1 className="frontlead mt-2 mb-5">Projects</h1>
+				<h1 className="frontlead mt-2 mb-4">Projects</h1>
 				<Modal isOpen={this.state.modal} toggle={this.toggle}>
 					<ModalHeader toggle={this.toggle}>Contact Me</ModalHeader>
 					<ModalBody>
@@ -103,63 +98,82 @@ export class Home extends React.Component {
 				<Container fluid className="mb-4">
 					<div className="rowp">
 						<div className="colp-1-of-3">
-							<Card>
-								<CardImg top width="100%" src={toDo} alt="Todo App Thumbnail" />
-								<CardBody>
-									<CardTitle>Todo App</CardTitle>
-									<CardText>
-										React.JS | HTML | CSS | ReacStrap | Node.Js | Worpress | ACF | PHP
-									</CardText>
-									<Button
-										outline
-										href="https://github.com/angelo-martinez/todoapp"
-										color="info"
-										className="mr-1">
-										Github Repo
-									</Button>
-									<Button outline color="info">
-										Live Demo
-									</Button>
-								</CardBody>
-							</Card>
+							<div className="cardp">
+								<div className="cardp--side cardp--side--front">
+									<div className="cardp--picture cardp--picture-1">&nbsp;</div>
+									<h4 className="cardp--heading">To-Do App</h4>
+									<div className="cardp--details">
+										<ul>
+											<li>React.JS</li>
+											<li>HTML</li>
+											<li>CSS</li>
+											<li>Node.Js</li>
+											<li>Git</li>
+										</ul>
+									</div>
+								</div>
+								<div className="cardp--side cardp--side--back">
+									<div className="cardp__cta">
+										<a
+											href="https://github.com/angelo-martinez/todoapp"
+											className="button button--primary">
+											😺 Repo
+										</a>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div className="colp-1-of-3">
-							<Card>
-								<CardImg top width="100%" src={ReactCloset} alt="React Closet Thumbnail" />
-								<CardBody>
-									<CardTitle>React Closet</CardTitle>
-									<CardText>
-										React.JS | HTML | CSS | ReacStrap | Node.Js | Worpress | ACF | PHP
-									</CardText>
-									<Button
-										outline
-										color="info"
-										href="https://github.com/amart31/final-project-frontend"
-										className="mr-1">
-										Github Repo
-									</Button>
-									<Button outline color="info">
-										Live Demo
-									</Button>
-								</CardBody>
-							</Card>
+							<div className="cardp">
+								<div className="cardp--side cardp--side--front">
+									<div className="cardp--picture cardp--picture-2">&nbsp;</div>
+									<h4 className="cardp--heading">React-Closet</h4>
+									<div className="cardp--details">
+										<ul>
+											<li>React.JS</li>
+											<li>HTML</li>
+											<li>CSS</li>
+											<li>Node.Js</li>
+											<li>Worpress</li>
+										</ul>
+									</div>
+								</div>
+								<div className="cardp--side cardp--side--back">
+									<div className="cardp__cta">
+										<a
+											href="https://github.com/amart31/final-project-frontend"
+											className="button button--primary">
+											😺 Repo
+										</a>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div className="colp-1-of-3">
-							<Card>
-								<CardImg top width="100%" src={meetup} alt="Meetup Clone Thumbnail" />
-								<CardBody>
-									<CardTitle>Meetup Clone</CardTitle>
-									<CardText>
-										React.JS | HTML | CSS | ReacStrap | Node.Js | Worpress | ACF | PHP
-									</CardText>
-									<Button outline color="info" className="mr-1">
-										Github Repo
-									</Button>
-									<Button outline color="info">
-										Live Demo
-									</Button>
-								</CardBody>
-							</Card>
+							<div className="cardp">
+								<div className="cardp--side cardp--side--front">
+									<div className="cardp--picture cardp--picture-3">&nbsp;</div>
+									<h4 className="cardp--heading">Meetup Clone</h4>
+									<div className="cardp--details">
+										<ul>
+											<li>React.JS</li>
+											<li>HTML</li>
+											<li>CSS</li>
+											<li>Node.Js</li>
+											<li>Git</li>
+										</ul>
+									</div>
+								</div>
+								<div className="cardp--side cardp--side--back">
+									<div className="cardp__cta">
+										<a
+											href="https://github.com/angelo-martinez/meetup-react"
+											className="button button--primary">
+											😺 Repo
+										</a>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</Container>
