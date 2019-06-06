@@ -1,0 +1,16 @@
+.about-me {
+    font-size: $default-font-size;
+    background-color: #f7f7f7;
+
+    &__top{
+        height: 50vh;
+    }
+
+    &__bottom{
+        height: 40vh;
+    }
+
+    &__footer {
+        height: 10vh;
+    }
+}

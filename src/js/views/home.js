@@ -44,7 +44,7 @@ export class Home extends React.Component {
 						<span className="header--name">Angelo Martinez</span>
 					</div>
 					<div className="header--textbox">
-						<h1 className="header--heading-primary">Front-End Dev</h1>
+						<h1 className="header--heading-primary">Web Developer</h1>
 					</div>
 				</header>
 				<div className="header--sub">
