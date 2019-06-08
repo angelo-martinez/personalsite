@@ -32,11 +32,15 @@
   &--primary {
     border: 1px solid $color-primary;
     background-color: $color-primary;
-    color: white;
+    color: $color-white;
 
     &::after {
       background-color: $color-primary;
     }
+  }
+
+  &--about {
+    margin-top: 20vh;
   }
 
   &::after {

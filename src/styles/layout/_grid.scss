@@ -19,4 +19,8 @@
   .colp-1-of-3 {
     width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
   }
+
+  .colp-1-of-5 {
+    width: calc((100% - 4 * #{$gutter-horizontal}) / 5);
+  }
 }
