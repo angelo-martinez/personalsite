@@ -1,25 +1,31 @@
 .about-me {
   font-size: $default-font-size;
-  background-color: rgba($color-primary, 0.5);
-  font-size: $default-font-size;
   text-align: center;
-  color: $color-white;
 
   &__top {
-    height: 50vh;
+    height: 85vh;
     background-image: linear-gradient(
-      to bottom,
-      rgba($color-primary, 0.5),
-      rgba($color-purple, 0.5)
-    );
+        to right bottom,
+        rgba($color-purple, 0.6),
+        rgba($color-primary, 0.6)
+      ),
+      url(../img/palms2.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 100%);
   }
 
-  &__bottom {
-    height: 50vh;
-    background-image: linear-gradient(
-      to top,
-      rgba($color-primary, 0.5),
-      rgba($color-purple, 0.5)
-    );
+  &__spacer {
+    height: 15vh;
+  }
+
+  &__card {
+    display: block;
+    height: 15rem;
+    width: 30rem;
+    background: #202746;
+    border: 1rem solid $color-purple;
+    margin: 0 auto;
   }
 }

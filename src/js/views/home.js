@@ -51,27 +51,31 @@ export class Home extends React.Component {
 					<div className="header--sub--center">
 						<a
 							href="https://docs.google.com/document/d/16etI0mQeENXcUXcjRM8BnDYfg62afYpI7mk5GjqsfjU/edit?usp=sharing"
+							target="_blank"
+							rel="noopener noreferrer"
 							className="mr-2 button button--primary button--animated--left">
 							📂 Resume
 						</a>
 						<a
 							href="https://twitter.com/Angelocodes"
+							target="_blank"
+							rel="noopener noreferrer"
 							className="mr-2 button button--primary button--animated--left">
 							🐦 Twitter
 						</a>
 						<Link to="/about">
-							<a href="#" className="mr-2 button button--primary button--animated">
-								👀 About Me
-							</a>
+							<div className="mr-2 button button--primary button--animated">👀 About Me</div>
 						</Link>
 						<a
 							href="https://github.com/angelo-martinez"
+							target="_blank"
+							rel="noopener noreferrer"
 							className="mr-2 button button--primary button--animated--right">
 							😺 Github
 						</a>
-						<a href="#" className="button button--primary button--animated--right" onClick={this.toggle}>
+						<div href="#" className="button button--primary button--animated--right" onClick={this.toggle}>
 							📱 Contact
-						</a>
+						</div>
 					</div>
 				</div>
 				<h1 className="frontlead mt-2 mb-4">Projects</h1>
