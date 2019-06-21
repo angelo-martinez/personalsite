@@ -10,7 +10,7 @@ import Reactimg from "../../img/react.png";
 
 import HTML from "../../img/html5.png";
 import CSS from "../../img/css3.png";
-import And from "../../img/and.jpg";
+import Ampersand from "../../img/ampersand.png";
 
 import Github from "../../img/github.png";
 import Webpack from "../../img/webpack.png";
@@ -57,11 +57,11 @@ export const AboutMe = () => {
 			<ScrollAnimation animateIn="fadeInLeft">
 				<div className="about-me__card">
 					<div className="about-me__card--text">
-						<p className="pt-3">My very first languages were:</p>
-						<div className="pt-5">
-							<img src={HTML} className="lang-img" alt="HTML" height="150" width="150" />
-							<img src={And} className="lang-img" alt="and" height="150" width="150" />
-							<img src={CSS} className="lang-img" alt="CSS" height="150" width="150" />
+						<p className="pt-2">My very first languages were:</p>
+						<div className="pt-2">
+							<img src={HTML} className="lang-img" alt="HTML" height="200" width="200" />
+							<img src={Ampersand} className="lang-img" alt="and" height="200" width="200" />
+							<img src={CSS} className="lang-img" alt="CSS" height="200" width="200" />
 						</div>
 					</div>
 				</div>

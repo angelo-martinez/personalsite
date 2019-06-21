@@ -37,17 +37,16 @@
     width: 75%;
     display: block;
     margin: 0 auto;
-    box-shadow: 0 3rem 6rem rgba(#000, .1);
-    background-color: rgba(#fff, .6);
+    box-shadow: 0 3rem 6rem rgba(#000, 0.1);
+    background-color: rgba(#fff, 0.6);
     border-radius: 3px;
-    padding: 6rem;
+    padding: 2rem;
     color: #2b2b2b;
     height: 30rem;
     transform: skewX(-12deg);
-    
-    &--top{
+
+    &--text {
       transform: skewX(12deg);
     }
-
   }
 }
