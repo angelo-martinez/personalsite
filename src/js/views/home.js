@@ -73,7 +73,7 @@ export class Home extends React.Component {
 							className="mr-2 button button--primary button--animated--right">
 							😺 Github
 						</a>
-						<div href="#" className="button button--primary button--animated--right" onClick={this.toggle}>
+						<div className="button button--primary button--animated--right" onClick={this.toggle}>
 							📱 Contact
 						</div>
 					</div>
@@ -85,16 +85,20 @@ export class Home extends React.Component {
 						<Form>
 							<FormGroup>
 								<Label for="email">Email</Label>
-								<Input type="email" name="email" id="email" placeholder="your@email" />
+								<Input type="email" name="email" id="email" placeholder="Your email" />
 							</FormGroup>
 							<FormGroup>
-								<Label for="text">Text Area</Label>
-								<Input type="textarea" name="text" id="text" />
+								<Label for="name">Name</Label>
+								<Input type="text" name="name" placeholder="Your name" />
+							</FormGroup>
+							<FormGroup>
+								<Label for="message">Message</Label>
+								<Input type="textarea" name="message" id="message" placeholder="Your message" />
 							</FormGroup>
 						</Form>
 					</ModalBody>
 					<ModalFooter>
-						<Button outline color="info" onClick={this.toggle}>
+						<Button outline color="info" onClick={this.toggle} type="submit">
 							Send me an Email
 						</Button>
 					</ModalFooter>

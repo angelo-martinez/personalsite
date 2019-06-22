@@ -47,6 +47,18 @@
 
     &--text {
       transform: skewX(12deg);
+
+      &-intro{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: skewX(12deg) translate(-50%, -50%);
+        width: 80%;
+      }
+    }
+
+    &--logo{
+      color: $color-primary;
     }
   }
 }
