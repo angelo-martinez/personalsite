@@ -53,24 +53,24 @@ export class Home extends React.Component {
 							href="https://docs.google.com/document/d/16etI0mQeENXcUXcjRM8BnDYfg62afYpI7mk5GjqsfjU/edit?usp=sharing"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="mr-2 button button--primary button--animated--left">
+							className="mr-4 button button--primary button--animated--left">
 							📂 Resume
 						</a>
 						<a
 							href="https://twitter.com/Angelocodes"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="mr-2 button button--primary button--animated--left">
+							className="mr-4 button button--primary button--animated--left">
 							🐦 Twitter
 						</a>
 						<Link to="/about">
-							<div className="mr-2 button button--primary button--animated">👀 About Me</div>
+							<div className="mr-4 button button--primary button--animated">👀 About Me</div>
 						</Link>
 						<a
 							href="https://github.com/angelo-martinez"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="mr-2 button button--primary button--animated--right">
+							className="mr-4 button button--primary button--animated--right">
 							😺 Github
 						</a>
 						<div className="button button--primary button--animated--right" onClick={this.toggle}>

@@ -25,7 +25,19 @@
       font-weight: 300;
       letter-spacing: 3px;
       color: white;
-      padding: 15vh;
+      padding: 15rem;
+
+      @include respond(tab-port) {
+        font-size: 10rem;
+        letter-spacing: 1.5px;
+        padding: 10rem;
+      }
+
+      @include respond(phone) {
+        font-size: 8rem;
+        letter-spacing: 1.5px;
+        padding: 6rem;
+      }
     }
   }
 
@@ -35,30 +47,41 @@
 
   &__card {
     width: 75%;
+    height: auto;
     display: block;
     margin: 0 auto;
     box-shadow: 0 3rem 6rem rgba(#000, 0.1);
-    background-color: rgba(#fff, 0.6);
+    background-color: rgba($color-white, 0.6);
     border-radius: 3px;
     padding: 2rem;
     color: #2b2b2b;
-    height: 30rem;
     transform: skewX(-12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+      width: 100%;
+      padding: 1rem;
+  }
 
     &--text {
       transform: skewX(12deg);
+      padding: 1rem;
 
-      &-intro{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: skewX(12deg) translate(-50%, -50%);
-        width: 80%;
+      @include respond(phone) {
+        transform: skewX(0);
       }
     }
 
     &--logo{
       color: $color-primary;
+      
+      @include respond(tab-land) {
+        font-size: 7px;
+      }
+
+      @include respond(tab-port) {
+        font-size: 6px;
+      }
     }
   }
 }
