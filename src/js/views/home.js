@@ -1,24 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Contact from "../component/contact";
 //Reacstrap imports
-import {
-	Button,
-	Container,
-	Modal,
-	ModalHeader,
-	ModalBody,
-	ModalFooter,
-	Form,
-	FormGroup,
-	Label,
-	Input
-} from "reactstrap";
+import { Button, Container, Modal, ModalHeader, ModalBody } from "reactstrap";
 
-// image imports
-import ReactCloset from "../../img/react-closet_opt.png";
-import toDo from "../../img/to-do_opt.png";
+// image import
 import profile from "../../img/profile_opt.jpg";
-import meetup from "../../img/meetup_opt.png";
 
 export class Home extends React.Component {
 	constructor(props) {
@@ -82,26 +69,8 @@ export class Home extends React.Component {
 				<Modal isOpen={this.state.modal} toggle={this.toggle}>
 					<ModalHeader toggle={this.toggle}>Contact Me</ModalHeader>
 					<ModalBody>
-						<Form>
-							<FormGroup>
-								<Label for="email">Email</Label>
-								<Input type="email" name="email" id="email" placeholder="Your email" />
-							</FormGroup>
-							<FormGroup>
-								<Label for="name">Name</Label>
-								<Input type="text" name="name" placeholder="Your name" />
-							</FormGroup>
-							<FormGroup>
-								<Label for="message">Message</Label>
-								<Input type="textarea" name="message" id="message" placeholder="Your message" />
-							</FormGroup>
-						</Form>
+						<Contact />
 					</ModalBody>
-					<ModalFooter>
-						<Button outline color="info" onClick={this.toggle} type="submit">
-							Send me an Email
-						</Button>
-					</ModalFooter>
 				</Modal>
 				<Container fluid className="mb-4">
 					<div className="rowp">

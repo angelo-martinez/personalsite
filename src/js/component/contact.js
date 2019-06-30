@@ -9,69 +9,42 @@ export default class Contact extends React.Component {
 			email: "",
 			message: ""
 		};
-		this.name = React.createRef();
-		this.email = React.createRef();
-		this.message = React.createRef();
-    }
-    
-	handleChange(event) {
-		this.setState({ value: event.target.value });
+		this.handleChangeN = this.handleChangeN.bind(this);
+		this.handleChangeE = this.handleChangeE.bind(this);
+		this.handleChangeM = this.handleChangeM.bind(this);
+	}
+
+	handleChangeN(event) {
+		this.setState({ name: event.target.value });
+	}
+	handleChangeE(event) {
+		this.setState({ email: event.target.value });
+	}
+	handleChangeM(event) {
+		this.setState({ message: event.target.value });
 	}
 
 	render() {
 		return (
-            <Form
-                action="https://formspree.io/martinez1751@gmail.com"
-                method="POST"
-                className="form">
-                <FormGroup>
-                    <Label for="name">Name</Label>
-                    <Input
-                        type="text"
-                        name="name"
-                        ref={this.name}
-                        placeholder=" Your name"
-                        onChange={e =>
-                            this.setState({
-                                name: e.target.value
-                            })
-                        }
-                    />
-                </FormGroup>
-                <FormGroup>
-                    <Label for="email">Email</Label>
-                    <Input
-                        type="email"
-                        name="email"
-                        ref={this.email}
-                        placeholder="Email"
-                        onChange={e =>
-                            this.setState({
-                                email: e.target.value
-                            })
-                        }
-                    />
-                </FormGroup>
-                <FormGroup>
-                    <Label for="message">Message</Label>
-                    <Input
-                        type="textarea"
-                        name="message"
-                        ref={this.message}
-                        placeholder="Your message"
-                        onChange={e =>
-                            this.setState({
-                                message: e.target.value
-                            })
-                        }
-                    />
-                </FormGroup>
-                <div className="text-center pb-2">
-                    <Button outline color="info">
-                        Send me an Email
-                    </Button>
-                </div>
-            </Form>
-        );
-    }
+			<Form action="https://formspree.io/amart670@gmail.com" method="POST">
+				<FormGroup>
+					<Label for="name">Name</Label>
+					<Input type="text" name="name" placeholder=" Your name" onChange={this.handleChangeN} />
+				</FormGroup>
+				<FormGroup>
+					<Label for="email">Email</Label>
+					<Input type="email" name="email" placeholder="Email" onChange={this.handleChangeE} />
+				</FormGroup>
+				<FormGroup>
+					<Label for="message">Message</Label>
+					<Input type="textarea" name="message" placeholder="Your message" onChange={this.handleChangeM} />
+				</FormGroup>
+				<div className="text-center pb-2">
+					<Button outline color="info" type="submit" value="Send">
+						Send me an Email
+					</Button>
+				</div>
+			</Form>
+		);
+	}
 }
