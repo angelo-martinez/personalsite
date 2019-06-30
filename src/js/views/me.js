@@ -68,7 +68,7 @@ export const AboutMe = () => {
 						<p className="pt-2">A little bit about myself:</p>
 						<p>
 							I was born in Santa Clara, Cuba and I came to the US at the age of eight full of wonder and
-							excitement for my new life as in America. I graduated with a BS from FIU in 2019. It was my
+							excitement for my new life in America. I graduated with a BS from FIU in 2019. It was my
 							curiosity for all things tech and my desire to challenge myself that convinced me to enroll
 							in a Full-Stack boot camp and learn to code. Ever since the end of my boot camp I have been
 							working to improve my skills and continuously innovate. I can’t wait to see where my career
