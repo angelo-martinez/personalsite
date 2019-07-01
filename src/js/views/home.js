@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Contact from "../component/contact";
 //Reacstrap imports
-import { Button, Container, Modal, ModalHeader, ModalBody } from "reactstrap";
+import { Container, Modal, ModalHeader, ModalBody } from "reactstrap";
 
 // image import
 import profile from "../../img/profile_opt.jpg";
@@ -93,6 +93,8 @@ export class Home extends React.Component {
 									<div className="cardp__cta">
 										<a
 											href="https://github.com/angelo-martinez/todoapp"
+											target="_blank"
+											rel="noopener noreferrer"
 											className="button button--primary">
 											😺 Repo
 										</a>
@@ -119,6 +121,8 @@ export class Home extends React.Component {
 									<div className="cardp__cta">
 										<a
 											href="https://github.com/amart31/final-project-frontend"
+											target="_blank"
+											rel="noopener noreferrer"
 											className="button button--primary">
 											😺 Repo
 										</a>
@@ -145,6 +149,8 @@ export class Home extends React.Component {
 									<div className="cardp__cta">
 										<a
 											href="https://github.com/angelo-martinez/meetup-react"
+											target="_blank"
+											rel="noopener noreferrer"
 											className="button button--primary">
 											😺 Repo
 										</a>

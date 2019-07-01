@@ -10,3 +10,19 @@ body {
   text-transform: uppercase;
   padding-bottom: 1rem;
 }
+
+//Modal Font
+.modal-title{
+  font-size: $default-font-size;
+}
+
+.modal-body{
+  font-size: $default-font-size;
+}
+
+.form-control{
+  font-size: $default-font-size;
+}
+.btn{
+  font-size: $default-font-size;
+}

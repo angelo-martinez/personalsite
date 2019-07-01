@@ -39,7 +39,7 @@ export default class Contact extends React.Component {
 					<Label for="message">Message</Label>
 					<Input type="textarea" name="message" placeholder="Your message" onChange={this.handleChangeM} />
 				</FormGroup>
-				<div className="text-center pb-2">
+				<div className="text-center">
 					<Button outline color="info" type="submit" value="Send">
 						Send me an Email
 					</Button>
