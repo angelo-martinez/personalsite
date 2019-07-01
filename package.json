@@ -2,7 +2,7 @@
 	"name": "react-hello-webapp",
 	"version": "1.0.1",
 	"description": "",
-	"homepage": "https://angelo-martinez.github.io/personalsite",
+	"homepage": "https://www.angelocodes.com",
 	"main": "index.js",
 	"scripts": {
 		"c9": "webpack-dev-server --config webpack.dev.js --host $IP --port $PORT",
