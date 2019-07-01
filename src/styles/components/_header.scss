@@ -9,6 +9,10 @@
   background-position: top;
   position: relative;
 
+  @include respond(tab-port) {
+    height: 100vh;
+  }
+
   &--name {
     color: white;
     font-size: 3.5rem;
@@ -19,6 +23,10 @@
     animation: lightUp 1.2s ease-in;
     text-transform: uppercase;
     margin-left: 5px;
+
+    @include respond(tab-port) {
+      display: block;
+    }
   }
 
   &--profileimg {
@@ -34,6 +42,13 @@
     top: 2rem;
     left: 2rem;
     backface-visibility: hidden;
+
+    @include respond(tab-port) {
+      position: absolute;
+      top: 2rem;
+      left: 50%;
+      transform: translate(-50%);
+    }
   }
 
   &--textbox {
@@ -43,6 +58,10 @@
     transform: translate(-50%, -50%);
     backface-visibility: hidden;
     text-transform: uppercase;
+
+    @include respond(phone) {
+      top: 60%;
+    }
   }
 
   &--heading-primary {
@@ -56,6 +75,14 @@
   &--sub {
     height: 10vh;
     position: relative;
+
+    @include respond(tab-port) {
+      height: 15vh;
+    }
+
+    @include respond(phone) {
+      height: 20vh;
+    }
 
     &--center {
       position: absolute;
