@@ -15,6 +15,7 @@
 
     @include respond(tab-port) {
       font-size: 1rem;
+      margin: .1rem;
     }
 
     @include respond(phone) {

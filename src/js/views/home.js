@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Contact from "../component/contact";
+import axios from "axios";
 //Reacstrap imports
-import { Container, Modal, ModalHeader, ModalBody } from "reactstrap";
+import { Form, FormGroup, Input, Button, Label, Container, Modal, ModalHeader, ModalBody } from "reactstrap";
 
 // image import
 import profile from "../../img/profile_opt.jpg";
@@ -11,11 +11,29 @@ export class Home extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			modal: false
+			modal: false,
+			name: "",
+			email: "",
+			message: ""
 		};
 
 		this.toggle = this.toggle.bind(this);
 	}
+
+	handleForm = e => {
+		axios
+			.post("https://formcarry.com/s/LB3KICYPEUw", this.state, { headers: { Accept: "application/json" } })
+			.then(function(response) {
+				console.log(response);
+			})
+			.catch(function(error) {
+				console.log(error);
+			});
+
+		e.preventDefault();
+	};
+
+	handleFields = e => this.setState({ [e.target.name]: e.target.value });
 
 	toggle() {
 		this.setState(prevState => ({
@@ -69,7 +87,44 @@ export class Home extends React.Component {
 				<Modal isOpen={this.state.modal} toggle={this.toggle}>
 					<ModalHeader toggle={this.toggle}>Contact Me</ModalHeader>
 					<ModalBody>
-						<Contact />
+						<Form onSubmit={this.handleForm}>
+							<FormGroup>
+								<Label for="name">Name</Label>
+								<Input
+									type="text"
+									id="name"
+									name="name"
+									placeholder="Your name"
+									onChange={this.handleFields}
+								/>
+							</FormGroup>
+							<FormGroup>
+								<Label for="email">Email</Label>
+								<Input
+									type="email"
+									id="email"
+									name="email"
+									placeholder="Email"
+									onChange={this.handleFields}
+								/>
+							</FormGroup>
+							<FormGroup>
+								<Label for="message">Message</Label>
+								<Input
+									type="textarea"
+									id="message"
+									name="message"
+									placeholder="Your message"
+									onChange={this.handleFields}
+								/>
+							</FormGroup>
+							<div className="text-center">
+								<Button outline color="info" type="submit" onClick={this.toggle}>
+									Send me an Email
+								</Button>
+							</div>
+							<Input type="hidden" name="_gotcha" />
+						</Form>
 					</ModalBody>
 				</Modal>
 				<Container fluid className="mb-4">
