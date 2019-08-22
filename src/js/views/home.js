@@ -55,7 +55,7 @@ export class Home extends React.Component {
 				<div className="header--sub">
 					<div className="header--sub--center">
 						<a
-							href="https://docs.google.com/document/d/16etI0mQeENXcUXcjRM8BnDYfg62afYpI7mk5GjqsfjU/edit?usp=sharing"
+							href="https://docs.google.com/document/d/1CZwiZ9IZyXYneoIthMydqQ8qoLFs9z26fbEdAc8qq7Y/edit?usp=sharing"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="mr-4 button button--primary button--animated--left">
