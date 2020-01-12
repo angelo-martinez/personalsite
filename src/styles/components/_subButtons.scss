@@ -14,12 +14,16 @@
     color: white;
 
     @include respond(tab-port) {
-      font-size: 1rem;
+      font-size: 1.5rem;
       margin: .1rem;
+      padding: 1.5rem 2.5rem;
     }
 
     @include respond(phone) {
-      font-size: 8px;
+      font-size: 2rem;
+      display: block;
+      border-radius: 0;
+      margin: 0 !important;
     }
   }
 
@@ -44,6 +48,10 @@
     border: 1px solid $color-primary;
     background-color: $color-primary;
     color: $color-white;
+    @include respond(phone) {
+      border: none;
+      border-bottom: 1px solid $color-white;
+    }
 
     &::after {
       background-color: $color-primary;
