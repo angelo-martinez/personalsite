@@ -14,7 +14,7 @@ export const AboutMe = () => {
 				<div className="about-me__card">
 					<div className="about-me__card--text about-me__card--text-intro">
 						<p>
-							I am a front end developer from Miami Florida. I possess good knowledge of the latest
+							I am a front end developer from Miami, Florida. I possess good knowledge of the latest
 							web-development technologies like ReactJS, vanilla Javascript, NodeJS, HTML5, CSS, SASS and
 							many more. Currently I am a front end developer at San Services USA, a subsidary of Sandals
 							Resorts.

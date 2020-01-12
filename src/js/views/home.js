@@ -22,7 +22,9 @@ export class Home extends React.Component {
 
 	handleForm = e => {
 		axios
-			.post("https://formcarry.com/s/LB3KICYPEUw", this.state, { headers: { Accept: "application/json" } })
+			.post("https://formcarry.com/s/LB3KICYPEUw", this.state, {
+				headers: { Accept: "application/json" }
+			})
 			.then(function(response) {
 				console.log(response);
 			})
@@ -62,11 +64,11 @@ export class Home extends React.Component {
 							📂 Resume
 						</a>
 						<a
-							href="https://twitter.com/Angelocodes"
+							href="https://linkedin.com/in/angelo-martinez/"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="mr-4 button button--primary button--animated--left">
-							🐦 Twitter
+							👨🏽‍💼 Linkedin
 						</a>
 						<Link to="/about">
 							<div className="mr-4 button button--primary button--animated">👀 About Me</div>
