@@ -56,31 +56,33 @@ export class Home extends React.Component {
 				</header>
 				<div className="header--sub">
 					<div className="header--sub--center">
-						<a
-							href="https://docs.google.com/document/d/1CZwiZ9IZyXYneoIthMydqQ8qoLFs9z26fbEdAc8qq7Y/edit?usp=sharing"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="mr-4 button button--primary button--animated--left">
-							📂 Resume
-						</a>
+						<Link to="/resume">
+							<div className="mr-4 button button--primary button--border button--animated--left">
+								📂 Resume
+							</div>
+						</Link>
 						<a
 							href="https://linkedin.com/in/angelo-martinez/"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="mr-4 button button--primary button--animated--left">
+							className="mr-4 button button--primary button--border button--animated--left">
 							👨🏽‍💼 Linkedin
 						</a>
 						<Link to="/about">
-							<div className="mr-4 button button--primary button--animated">👀 About Me</div>
+							<div className="mr-4 button button--primary button--border button--animated">
+								👀 About Me
+							</div>
 						</Link>
 						<a
 							href="https://github.com/angelo-martinez"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="mr-4 button button--primary button--animated--right">
+							className="mr-4 button button--primary button--border button--animated--right">
 							😺 Github
 						</a>
-						<div className="button button--primary button--animated--right" onClick={this.toggle}>
+						<div
+							className="button button--primary button--border button--animated--right"
+							onClick={this.toggle}>
 							📱 Contact
 						</div>
 					</div>
