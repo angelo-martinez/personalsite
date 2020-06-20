@@ -7,7 +7,7 @@ const Layout = (props) => {
   return (
     <div className={styles.wrapper}>
       <SideBar />
-      <main>{props.children}</main>
+      <main className={styles.main}>{props.children}</main>
     </div>
   );
 };
