@@ -1,4 +1,6 @@
 require('./src/styles/global.scss');
+require('typeface-open-sans');
+require('typeface-ubuntu');
 
 exports.onClientEntry = () => {
   window.onload = () => {

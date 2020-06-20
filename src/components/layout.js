@@ -1,18 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import SideBar from './sidebar';
-import Footer from './footer';
-
-import layoutStyles from './layout.module.scss';
+import styles from './layout.module.scss';
 
 const Layout = (props) => {
   return (
-    <>
+    <div className={styles.wrapper}>
       <SideBar />
       <main>{props.children}</main>
-      <Footer footerCta={props.footerCta} />
-    </>
+    </div>
   );
 };
 
