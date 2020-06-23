@@ -22,7 +22,7 @@ const IndexPage = () => {
           </p>
           <p>
             Please feel free to check out some of my favorite side projects
-            below or read my <Link to="blog">blog</Link>
+            below or read my <Link to="/blog">blog</Link>
           </p>
         </article>
         <article className="project-card">
