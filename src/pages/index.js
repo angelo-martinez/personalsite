@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Card from '../components/card';
+import styles from '../styles/pages/index.module.scss';
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
@@ -25,18 +27,61 @@ const IndexPage = () => {
             below or read my <Link to="/blog">blog</Link>
           </p>
         </article>
-        <article className="project-card">
-          <h2>Project 1</h2>
-        </article>
-        <article className="project-card">
-          <h2>Project 2</h2>
-        </article>
-        <article className="project-card">
-          <h2>Project 3</h2>
-        </article>
+        <section className={styles.grid}>
+          <Card
+            img={data.meetupImg.childImageSharp.fluid}
+            name="Meetup Clone"
+            stack="stack | stack | stack"
+            link="https://github.com/angelo-martinez/meetup-react"
+          />
+          <Card
+            img={data.todoImg.childImageSharp.fluid}
+            name="To-do App"
+            stack="stack | stack | stack"
+            link="https://github.com/angelo-martinez/todoapp"
+          />
+          <Card
+            img={data.reactImg.childImageSharp.fluid}
+            name="Meetup Clone"
+            stack="stack | stack | stack"
+            link="https://github.com/amart31/final-project-frontend"
+          />
+          <Card
+            img={data.reactImg.childImageSharp.fluid}
+            name="MSR"
+            stack="stack | stack | stack"
+            link="https://github.com/angelo-martinez/todoapp"
+          />
+        </section>
       </div>
     </Layout>
   );
 };
+
+export const query = graphql`
+  query {
+    meetupImg: file(relativePath: { eq: "meetup_opt.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 620, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    todoImg: file(relativePath: { eq: "to-do_opt.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 620, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    reactImg: file(relativePath: { eq: "react-closet_opt.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 620, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;

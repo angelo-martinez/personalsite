@@ -1,0 +1,25 @@
+.card {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.body {
+  flex-grow: 1;
+  padding: 24px;
+  background-color: $orange;
+  color: white;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.copy {
+  line-height: 1.25;
+  font-size: 20px;
+}

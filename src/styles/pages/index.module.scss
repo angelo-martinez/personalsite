@@ -1,0 +1,13 @@
+.intro {
+  font-size: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 20px;
+
+  @media (min-width: $lg-min) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
