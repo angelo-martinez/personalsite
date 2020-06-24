@@ -10,8 +10,10 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <div className="container">
-        <article className="intro">
-          <h2>Hello World! welcome to my little corner of the internet.</h2>
+        <article className={styles.intro}>
+          <h2 className={styles.lead}>
+            Hello World! welcome to my little corner of the internet.
+          </h2>
           <p>
             I am a front end developer with a passion for all things javascript.
             I have experience with ReactJs, GatsbyJs, Wordpress/PHP, and
@@ -29,10 +31,10 @@ const IndexPage = ({ data }) => {
         </article>
         <section className={styles.grid}>
           <Card
-            img={data.meetupImg.childImageSharp.fluid}
-            name="Meetup Clone"
+            img={data.msrImg.childImageSharp.fluid}
+            name="MySurgeryRecovery.com"
             stack="stack | stack | stack"
-            link="https://github.com/angelo-martinez/meetup-react"
+            link="https://mysurgeryrecovery.com/"
           />
           <Card
             img={data.todoImg.childImageSharp.fluid}
@@ -41,16 +43,16 @@ const IndexPage = ({ data }) => {
             link="https://github.com/angelo-martinez/todoapp"
           />
           <Card
-            img={data.reactImg.childImageSharp.fluid}
-            name="Meetup Clone"
+            img={data.spaceImg.childImageSharp.fluid}
+            name="Space Invaders"
             stack="stack | stack | stack"
-            link="https://github.com/amart31/final-project-frontend"
+            link="https://github.com/angelo-martinez/space-invaders"
           />
           <Card
-            img={data.reactImg.childImageSharp.fluid}
-            name="MSR"
+            img={data.spaceImg.childImageSharp.fluid}
+            name="Meetup Clone"
             stack="stack | stack | stack"
-            link="https://github.com/angelo-martinez/todoapp"
+            link="https://github.com/angelo-martinez/meetup-react"
           />
         </section>
       </div>
@@ -60,21 +62,21 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
-    meetupImg: file(relativePath: { eq: "meetup_opt.png" }) {
+    msrImg: file(relativePath: { eq: "msr.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 620, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    todoImg: file(relativePath: { eq: "to-do_opt.png" }) {
+    todoImg: file(relativePath: { eq: "todo.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 620, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    reactImg: file(relativePath: { eq: "react-closet_opt.png" }) {
+    spaceImg: file(relativePath: { eq: "space-invaders.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 620, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
