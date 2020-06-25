@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => {
       <div className="container">
         <article className={styles.intro}>
           <h2 className={styles.lead}>
-            Hello World! welcome to my little corner of the internet.
+            Hello World! Welcome to my little corner of the internet.
           </h2>
           <p>
             I am a front end developer with a passion for all things javascript.
@@ -32,26 +32,27 @@ const IndexPage = ({ data }) => {
         <section className={styles.grid}>
           <Card
             img={data.msrImg.childImageSharp.fluid}
-            name="MySurgeryRecovery.com"
-            stack="stack | stack | stack"
+            name="My Surgery Recovery.com"
+            stack="GatsbyJs | CSS Modules"
             link="https://mysurgeryrecovery.com/"
+            live={true}
           />
           <Card
             img={data.todoImg.childImageSharp.fluid}
             name="To-do App"
-            stack="stack | stack | stack"
+            stack="ReactJs | SCSS"
             link="https://github.com/angelo-martinez/todoapp"
           />
           <Card
             img={data.spaceImg.childImageSharp.fluid}
             name="Space Invaders"
-            stack="stack | stack | stack"
+            stack="vanillaJS | HTML | CSS"
             link="https://github.com/angelo-martinez/space-invaders"
           />
           <Card
             img={data.spaceImg.childImageSharp.fluid}
             name="Meetup Clone"
-            stack="stack | stack | stack"
+            stack="ReactJs | CSS"
             link="https://github.com/angelo-martinez/meetup-react"
           />
         </section>

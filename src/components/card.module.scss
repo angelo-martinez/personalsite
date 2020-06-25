@@ -1,22 +1,24 @@
 .card {
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow: hidden;
 }
 
 .body {
   flex-grow: 1;
   padding: 24px;
-  background-color: $orange;
-  color: white;
+  background-color: $white;
+  color: $orange;
 }
 
 .title {
-  font-size: 35px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
+
+  @media (min-width: 375px) {
+    font-size: 35px;
+  }
 }
 
 .copy {

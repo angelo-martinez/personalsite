@@ -1,8 +1,15 @@
 .sidebar {
-  background-color: #1d1d2c;
   color: $white;
-  padding: 32px 25px;
   font-family: 'Ubuntu', sans-serif;
+}
+
+.sticky {
+  padding: 32px 25px;
+
+  @media (min-width: $md-min) {
+    position: sticky;
+    top: 0;
+  }
 }
 
 .intro {
@@ -13,7 +20,7 @@
 
   img {
     border-radius: 50%;
-    border: 6px solid $orange;
+    background: $white;
   }
 }
 
