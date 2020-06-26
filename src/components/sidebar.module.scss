@@ -37,11 +37,11 @@
   line-height: 1.6;
   display: block;
   color: $white;
-  transition: all 0.1s ease-in;
+  @include transition;
 
   &:hover {
     text-decoration: underline;
-    color: $orange;
+    color: $blue;
   }
 }
 
@@ -49,7 +49,7 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  transition: all 0.1s ease-in;
+  @include transition;
 
   a {
     color: $white;
@@ -57,7 +57,7 @@
     line-height: 1;
 
     &:hover {
-      color: $orange;
+      color: $blue;
     }
 
     &:nth-child(2) {

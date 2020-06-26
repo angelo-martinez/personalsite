@@ -1,8 +1,8 @@
 // Colors
-$orange: #123550;
-$blue: #1d1d2c;
+$blue: #123550;
+$dark-blue: #1d1d2c;
 $white: #dfe3b9;
-$font: #403c42;
+
 // Breakpoints
 $sm-max: 767px;
 $md-min: 768px;
@@ -10,3 +10,8 @@ $md-max: 991px;
 $lg-min: 992px;
 $lg-max: 1199px;
 $xl-min: 1200px;
+
+// mixins
+@mixin transition {
+  transition: all 0.1s ease-in;
+}
