@@ -14,8 +14,10 @@
 
   a {
     @include transition;
-    &:hover {
-      color: $blue;
+
+    &:hover,
+    &:focus {
+      text-shadow: 0 0 7px $white;
     }
   }
 }

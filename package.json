@@ -36,7 +36,8 @@
     "typeface-ubuntu": "0.0.65"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "prettier": "2.0.5",
+    "stylelint-config-recommended": "^3.0.0"
   },
   "license": "MIT",
   "main": "n/a",
