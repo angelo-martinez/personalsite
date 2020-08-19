@@ -2,12 +2,12 @@ import React from 'react';
 import Img from 'gatsby-image';
 import styles from '../styles/components/blogPostCard.module.scss';
 
-const Card = ({ img, name, description, link }) => {
+const BlogpostCard = ({ img, title, description, link }) => {
   return (
     <article className={styles.card}>
-      <Img fluid={img} />
+      <Img fixed={img} />
       <div className={styles.body}>
-        <h4 className={styles.title}>{name}</h4>
+        <h4 className={styles.title}>{title}</h4>
         <p className={styles.copy}>
           {description}
           <a href={link}>Continue reading</a>
@@ -17,4 +17,4 @@ const Card = ({ img, name, description, link }) => {
   );
 };
 
-export default Card;
+export default BlogpostCard;

@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
+import BlogpostCard from '../../components/blogpostCard';
 
 import styles from '../../styles/pages/blogIndex.module.scss';
 
@@ -14,13 +15,13 @@ const Blog = ({ data }) => {
       <SEO title="Blog" />
       <section className={`container ${styles.wrapper}`}>
         {pages &&
-          pages.map(({ node: page }) => {
-            return (
-              <div key={page.id}>
-                <h1>{page.frontmatter.title}</h1>
-              </div>
-            );
-          })}
+          pages.map(({ node: page }) => (
+            <BlogpostCard
+              key={page.id}
+              img={page.frontmatter.featuredimage.childImageSharp.fixed}
+              title={page.frontmatter.title}
+            />
+          ))}
       </section>
     </Layout>
   );
@@ -42,7 +43,16 @@ export const query = graphql`
           }
           frontmatter {
             title
+            date
             description
+            featuredimage {
+              childImageSharp {
+                fixed(width: 330, quality: 100) {
+                  ...GatsbyImageSharpFixed_withWebp
+                }
+              }
+            }
+            tags
           }
         }
       }
