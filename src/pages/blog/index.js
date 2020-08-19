@@ -20,6 +20,8 @@ const Blog = ({ data }) => {
               key={page.id}
               img={page.frontmatter.featuredimage.childImageSharp.fixed}
               title={page.frontmatter.title}
+              description={page.frontmatter.description}
+              link={page.fields.slug}
             />
           ))}
       </section>

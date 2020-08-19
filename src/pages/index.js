@@ -50,7 +50,7 @@ const IndexPage = ({ data }) => {
             link="https://github.com/angelo-martinez/space-invaders"
           />
           <Card
-            img={data.spaceImg.childImageSharp.fluid}
+            img={data.meetupImg.childImageSharp.fluid}
             name="Meetup Clone"
             stack="ReactJs | CSS"
             link="https://github.com/angelo-martinez/meetup-react"
@@ -78,6 +78,13 @@ export const query = graphql`
       }
     }
     spaceImg: file(relativePath: { eq: "space-invaders.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 620, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    meetupImg: file(relativePath: { eq: "meetup_opt.png" }) {
       childImageSharp {
         fluid(maxWidth: 620, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
