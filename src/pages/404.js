@@ -8,9 +8,9 @@ const NotFoundPage = () => (
     <SEO title="404: Not found" />
     <div
       className="container"
-      style={{ textAlign: 'center', paddingTop: '20px' }}
+      style={{ textAlign: 'center', paddingTop: '50px', color: '#dfe3b9' }}
     >
-      <h1>NOT FOUND</h1>
+      <h1 style={{ marginBottom: '15px' }}>NOT FOUND</h1>
       <p>I still haven't written that post yet... the sadness.</p>
     </div>
   </Layout>

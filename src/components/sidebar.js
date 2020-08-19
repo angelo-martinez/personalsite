@@ -7,7 +7,7 @@ import {
   faLinkedin,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import styles from './sidebar.module.scss';
+import styles from '../styles/components/sidebar.module.scss';
 
 const SideBar = () => {
   const data = useStaticQuery(graphql`
