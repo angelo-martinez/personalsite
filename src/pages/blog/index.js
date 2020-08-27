@@ -22,6 +22,7 @@ const Blog = ({ data }) => {
               title={page.frontmatter.title}
               description={page.frontmatter.description}
               link={page.fields.slug}
+              tags={page.frontmatter.tags}
             />
           ))}
       </section>
