@@ -4,8 +4,6 @@ import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import BlogpostCard from '../../components/blogpostCard';
 
-import styles from '../../styles/pages/blogIndex.module.scss';
-
 const Blog = ({ data }) => {
   const { edges: pages } = data.allMarkdownRemark;
 
@@ -13,7 +11,7 @@ const Blog = ({ data }) => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <section className={`container ${styles.wrapper}`}>
+      <section className="container">
         {pages &&
           pages.map(({ node: page }) => (
             <BlogpostCard

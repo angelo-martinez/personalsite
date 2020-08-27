@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import styles from '../styles/pages/tags.module.scss';
 
 class TagRoute extends React.Component {
   render() {
@@ -15,28 +16,24 @@ class TagRoute extends React.Component {
     ));
     const tag = this.props.pageContext.tag;
     const totalCount = this.props.data.allMarkdownRemark.totalCount;
-    const tagHeader = `${totalCount} post${
-      totalCount === 1 ? '' : 's'
-    } tagged with “${tag}”`;
+    const tagHeader = {
+      __html: `${totalCount} Post${
+        totalCount === 1 ? '' : 's'
+      } tagged with <span>#${tag}</span>`,
+    };
 
+    const capitalize = (string) => {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    };
     return (
       <Layout>
-        <SEO title={`${tag}`} />
-        <section className="section">
-          <div className="container content">
-            <div className="columns">
-              <div
-                className="column is-10 is-offset-1"
-                style={{ marginBottom: '6rem' }}
-              >
-                <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-                <ul className="taglist">{postLinks}</ul>
-                <p>
-                  <Link to="/tags/">Browse all tags</Link>
-                </p>
-              </div>
-            </div>
-          </div>
+        <SEO title={`${capitalize(tag)} Collection`} />
+        <section className="container">
+          <h3 className={styles.title} dangerouslySetInnerHTML={tagHeader}></h3>
+          <ul className={styles.list}>{postLinks}</ul>
+          <p>
+            <Link to="/tags/">Browse all tags</Link>
+          </p>
         </section>
       </Layout>
     );

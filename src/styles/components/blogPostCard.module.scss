@@ -2,6 +2,10 @@
   border: 2px solid $white;
   background-color: $blue;
 
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+
   @media (min-width: $md-min) {
     display: flex;
   }

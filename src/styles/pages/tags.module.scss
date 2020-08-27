@@ -1,0 +1,16 @@
+.title {
+  font-size: 24px;
+  margin-bottom: 40px;
+
+  @media (min-width: $md-min) {
+    font-size: 30px;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+}
+
+.list {
+  margin-bottom: 25px;
+}
