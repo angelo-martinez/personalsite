@@ -12,7 +12,7 @@ const BlogpostCard = ({ img, title, description, link, tags }) => {
   ));
   return (
     <article className={styles.card}>
-      <Img fixed={img} className={styles.img} />
+      <Img fluid={img} className={styles.img} />
       <div className={styles.body}>
         <h4 className={styles.title}>{title}</h4>
         <p className={styles.copy}>

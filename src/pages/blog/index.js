@@ -18,7 +18,7 @@ const Blog = ({ data }) => {
           pages.map(({ node: page }) => (
             <BlogpostCard
               key={page.id}
-              img={page.frontmatter.featuredimage.childImageSharp.fixed}
+              img={page.frontmatter.featuredimage.childImageSharp.fluid}
               title={page.frontmatter.title}
               description={page.frontmatter.description}
               link={page.fields.slug}
@@ -50,8 +50,8 @@ export const query = graphql`
             description
             featuredimage {
               childImageSharp {
-                fixed(width: 330, quality: 100) {
-                  ...GatsbyImageSharpFixed_withWebp
+                fluid(maxWidth: 530) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }

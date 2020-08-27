@@ -1,10 +1,13 @@
 .sidebar {
-  color: $white;
   font-family: 'Ubuntu', sans-serif;
 }
 
 .sticky {
   padding: 32px 25px;
+
+  @media (max-width: $sm-max) {
+    background-color: $blue;
+  }
 
   @media (min-width: $md-min) {
     position: sticky;
@@ -36,7 +39,6 @@
   font-size: 20px;
   line-height: 1.6;
   display: block;
-  color: $white;
   @include transition;
 
   &:hover,
@@ -53,7 +55,6 @@
   @include transition;
 
   a {
-    color: $white;
     font-size: 30px;
     line-height: 1;
 

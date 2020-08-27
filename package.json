@@ -43,6 +43,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "start": "gatsby develop"
+    "start": "gatsby develop",
+    "clean": "gatsby clean"
   }
 }
