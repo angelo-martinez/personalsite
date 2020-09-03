@@ -26,7 +26,7 @@ export const BlogPostTemplate = ({
         <PostContent content={content} className={styles.content} />
         {collections && collections.length ? (
           <div style={{ marginTop: `4rem` }}>
-            <h4>Tags</h4>
+            <h4>Tags:</h4>
             <ul className={styles.tags}>
               {collections.map((collection) => (
                 <li key={collection + `collection`}>

@@ -7,7 +7,7 @@ import styles from '../styles/components/blogPostCard.module.scss';
 const BlogpostCard = ({ img, title, description, link, collections }) => {
   const collectionsItems = collections.map((collection) => (
     <li key={collection}>
-      <Link to={`/collections/${kebabCase(collection)}/`}>{collection}</Link>
+      <Link to={`/collections/${kebabCase(collection)}/`}>#{collection}</Link>
     </li>
   ));
   return (

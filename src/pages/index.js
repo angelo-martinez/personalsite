@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
         <section className={styles.grid}>
           <Card
             img={data.msrImg.childImageSharp.fluid}
-            name="My Surgery Recovery.com"
+            name="My Surgery Recovery"
             stack="GatsbyJs | CSS Modules"
             link="https://mysurgeryrecovery.com/"
             live={true}

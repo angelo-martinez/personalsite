@@ -7,11 +7,19 @@ import BlogpostCard from '../../components/blogpostCard';
 const Blog = ({ data }) => {
   const { edges: pages } = data.allMarkdownRemark;
 
-  console.log(pages);
   return (
     <Layout>
       <SEO title="Blog" />
       <section className="container">
+        <h1
+          style={{
+            fontSize: '40px',
+            marginBottom: '25px',
+            textAlign: 'center',
+          }}
+        >
+          Blog
+        </h1>
         {pages &&
           pages.map(({ node: page }) => (
             <BlogpostCard
