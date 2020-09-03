@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
-import { Helmet } from 'react-helmet';
 import { graphql, Link } from 'gatsby';
+import SEO from '../components/seo';
 import Layout from '../components/layout';
 import Content, { HTMLContent } from '../components/content';
+import styles from '../styles/pages/post.module.scss';
 
 export const BlogPostTemplate = ({
   content,
@@ -12,39 +13,33 @@ export const BlogPostTemplate = ({
   description,
   collections,
   title,
-  helmet,
+  seo,
 }) => {
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {collections && collections.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Collections</h4>
-                <ul className="collectionslist">
-                  {collections.map((collection) => (
-                    <li key={collection + `collection`}>
-                      <Link to={`/collections/${kebabCase(collection)}/`}>
-                        {collection}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
+    <>
+      {seo || ''}
+      <div className="container">
+        <h1 className={styles.title}>{title}</h1>
+        <p className={styles.description}>{description}</p>
+        <PostContent content={content} className={styles.content} />
+        {collections && collections.length ? (
+          <div style={{ marginTop: `4rem` }}>
+            <h4>Tags</h4>
+            <ul className={styles.tags}>
+              {collections.map((collection) => (
+                <li key={collection + `collection`}>
+                  <Link to={`/collections/${kebabCase(collection)}/`}>
+                    #{collection}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
+        ) : null}
       </div>
-    </section>
+    </>
   );
 };
 
@@ -65,14 +60,11 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
+        seo={
+          <SEO
+            title={`${post.frontmatter.title}`}
+            description={`${post.frontmatter.description}`}
+          />
         }
         collections={post.frontmatter.collections}
         title={post.frontmatter.title}

@@ -1,0 +1,12 @@
+.title {
+  font-size: 24px;
+  margin-bottom: 40px;
+
+  @media (min-width: $md-min) {
+    font-size: 30px;
+  }
+}
+
+.tags {
+  list-style: none;
+}

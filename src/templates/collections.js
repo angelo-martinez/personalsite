@@ -33,10 +33,10 @@ const CollectionRoute = ({ data, pageContext }) => {
     <Layout>
       <SEO title={`#${capitalize(collection)} Post`} />
       <section className="container">
-        <h3
+        <h1
           className={styles.title}
           dangerouslySetInnerHTML={collectionHeader}
-        ></h3>
+        ></h1>
         <ul className={styles.list}>{postLinks}</ul>
         <p>
           <Link to="/collections/">Browse all collections</Link>

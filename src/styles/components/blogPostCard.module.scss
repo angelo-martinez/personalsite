@@ -44,14 +44,9 @@
 }
 
 .copy {
-  font-size: 20px;
   line-height: 1.25;
   margin-bottom: 20px;
   flex-grow: 1;
-
-  @media (min-width: $md-min) {
-    font-size: 18px;
-  }
 }
 
 .collections {

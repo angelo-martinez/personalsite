@@ -3,6 +3,7 @@ import { kebabCase } from 'lodash';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import styles from '../styles/pages/collections.module.scss';
 
 const CollectionsPage = ({
   data: {
@@ -17,7 +18,7 @@ const CollectionsPage = ({
           className="column is-10 is-offset-1"
           style={{ marginBottom: '6rem' }}
         >
-          <h1 className="title is-size-2 is-bold-light">Collections</h1>
+          <h1 className={styles.title}>Collections</h1>
           <ul className="collectionslist">
             {group.map((collection) => (
               <li key={collection.fieldValue}>
