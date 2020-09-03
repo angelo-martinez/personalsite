@@ -4,10 +4,10 @@ import Img from 'gatsby-image';
 import { kebabCase } from 'lodash';
 import styles from '../styles/components/blogPostCard.module.scss';
 
-const BlogpostCard = ({ img, title, description, link, tags }) => {
-  const tagsItems = tags.map((tag) => (
-    <li key={tag + `tag`}>
-      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+const BlogpostCard = ({ img, title, description, link, collections }) => {
+  const collectionsItems = collections.map((collection) => (
+    <li key={collection}>
+      <Link to={`/collections/${kebabCase(collection)}/`}>{collection}</Link>
     </li>
   ));
   return (
@@ -19,7 +19,7 @@ const BlogpostCard = ({ img, title, description, link, tags }) => {
           {description}
           <Link to={link}>Continue reading</Link>
         </p>
-        <ul className={styles.tags}>{tagsItems}</ul>
+        <ul className={styles.collections}>{collectionsItems}</ul>
       </div>
     </article>
   );

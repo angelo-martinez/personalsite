@@ -16,7 +16,7 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
-              tags
+              collections
               templateKey
             }
           }
@@ -35,7 +35,7 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id;
       createPage({
         path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
+        collections: edge.node.frontmatter.collections,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
@@ -46,26 +46,26 @@ exports.createPages = ({ actions, graphql }) => {
       });
     });
 
-    // Tag pages:
-    let tags = [];
-    // Iterate through each post, putting all found tags into `tags`
+    // Collections pages:
+    let collections = [];
+    // Iterate through each post, putting all found collections into `collections`
     posts.forEach((edge) => {
-      if (_.get(edge, `node.frontmatter.tags`)) {
-        tags = tags.concat(edge.node.frontmatter.tags);
+      if (_.get(edge, `node.frontmatter.collections`)) {
+        collections = collections.concat(edge.node.frontmatter.collections);
       }
     });
-    // Eliminate duplicate tags
-    tags = _.uniq(tags);
+    // Eliminate duplicate collections
+    collections = _.uniq(collections);
 
-    // Make tag pages
-    tags.forEach((tag) => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`;
+    // Make collections pages
+    collections.forEach((collection) => {
+      const collectionPath = `/collections/${_.kebabCase(collection)}/`;
 
       createPage({
-        path: tagPath,
-        component: path.resolve(`src/templates/tags.js`),
+        path: collectionPath,
+        component: path.resolve(`src/templates/collections.js`),
         context: {
-          tag,
+          collection,
         },
       });
     });

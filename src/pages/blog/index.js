@@ -20,7 +20,7 @@ const Blog = ({ data }) => {
               title={page.frontmatter.title}
               description={page.frontmatter.description}
               link={page.fields.slug}
-              tags={page.frontmatter.tags}
+              collections={page.frontmatter.collections}
             />
           ))}
       </section>
@@ -53,7 +53,7 @@ export const query = graphql`
                 }
               }
             }
-            tags
+            collections
           }
         }
       }
