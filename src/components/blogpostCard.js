@@ -17,6 +17,8 @@ const BlogpostCard = ({ img, title, description, link, collections }) => {
         <h4 className={styles.title}>{title}</h4>
         <p className={styles.copy}>
           {description}
+          <br />
+          <br />
           <Link to={link}>Continue reading</Link>
         </p>
         <ul className={styles.collections}>{collectionsItems}</ul>
