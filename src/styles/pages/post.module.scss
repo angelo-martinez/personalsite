@@ -7,6 +7,26 @@
   }
 }
 
+.description {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.content {
+  p {
+    margin-bottom: 15px;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+}
+
 .tags {
   list-style: none;
 }

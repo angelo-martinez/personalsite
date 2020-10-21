@@ -22,7 +22,7 @@ export const BlogPostTemplate = ({
       {seo || ''}
       <div className="container">
         <h1 className={styles.title}>{title}</h1>
-        <p className={styles.description}>{description}</p>
+        <h2 className={styles.description}>{description}</h2>
         <PostContent content={content} className={styles.content} />
         {collections && collections.length ? (
           <div style={{ marginTop: `4rem` }}>
