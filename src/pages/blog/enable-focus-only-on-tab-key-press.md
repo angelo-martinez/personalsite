@@ -14,7 +14,7 @@ Problem: You want to be accessible to your users by having keyboard focus on you
 
 Solution: You add an event listener to the body that detects if the user is using the mouse or the keyboard, if they are using the mouse then you add a class to the body that removes :focus styles.
 
-CSS:
+### **CSS:**
 
 ```css
 /* When mouse is detected, 
@@ -26,7 +26,7 @@ body.using-mouse *:focus {
 }
 ```
 
-JavaScript:
+### **JavaScript:**
 
 ```javascript
 // Remove focus styling from the body by adding the class using-mouse
@@ -42,7 +42,7 @@ document.body.addEventListener('keydown', (e) => {
 });
 ```
 
-GatsbyJS:
+### **GatsbyJS:**
 
 For Gatsby things get a bit more complicated. Since Gatsby is a static site generator we need to make sure that we can put this tiny script in all of our pages. Gatsby builds the pages in a node environment so there is no window object for us to addEventListener to. To get around this we must add the JS script into gatsby-browser.js file inside the onClientEntry API. onClientEntry is called when the Gatsby browser runtime first starts so it'll load as soon as your page loads for every page.
 
