@@ -1,6 +1,7 @@
 require('./src/styles/global.scss');
 require('typeface-open-sans');
 require('typeface-ubuntu');
+require('prismjs/themes/prism-okaidia.css');
 
 exports.onClientEntry = () => {
   window.onload = () => {
