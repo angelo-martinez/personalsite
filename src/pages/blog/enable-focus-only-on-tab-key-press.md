@@ -3,16 +3,16 @@ templateKey: blog-post
 url: focus_on_tab_only
 title: How to enable :focus only on tab key press with vanilla JS and GatsbyJS.
 date: 2020-08-19T00:26:47.997Z
-description: How to add focus to your web apps for keyboard only users and avoid
-  it for mouse users.
+description: How to add focus to your web apps for keyboard only users and
+  remove it for mouse users.
 featuredimage: /images/js-gatsby.jpg
 collections:
   - gatsbyjs
   - javascript
 ---
-Problem: You want to be accessible to your users by having keyboard focus on your GatsbyJS (or any other framework for that matter) page but you don't want the focus outlines to show when the user is using the mouse to navigate.
+**Problem:** You want to be accessible to your users by having keyboard focus on your GatsbyJS (or any other framework for that matter) page but you don't want the focus outlines to show when the user is using the mouse to navigate.
 
-Solution: You add an event listener to the body that detects if the user is using the mouse or the keyboard, if they are using the mouse then you add a class to the body that removes :focus styles.
+**Solution:** You add an event listener to the body that detects if the user is using the mouse or the keyboard. If they are using the mouse then you add a class to the body that removes `:focus` styles.
 
 ### **CSS:**
 
@@ -65,4 +65,4 @@ exports.onClientEntry = () => {
 };
 ```
 
-This is a slick way of making your site accessible. While you also might not want focus to go completely away on certain elements you can always just override the css styles for those certain elements like `<input />` and `<textarea />`.
+This is a slick way of making your site accessible. In case you want `:focus` styling to be turned on by default on certain elements, you can just set the `:focus` explicitly for those elements like `<input />` and `<textarea />`.
