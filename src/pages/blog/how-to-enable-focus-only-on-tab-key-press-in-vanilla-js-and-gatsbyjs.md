@@ -16,16 +16,53 @@ Solution: You add an event listener to the body that detects if the user is usin
 
 CSS:
 
-`/* When mouse is detected, ALL focused elements have outline removed. */ body.using-mouse *:focus { outline: none; }`
+```css
+/* When mouse is detected, 
+	 ALL focused elements have outline removed. 
+*/
+
+body.using-mouse *:focus {
+  outline: none;
+}
+```
 
 JavaScript:
 
-`// Remove focus styling from the body by adding the class using-mouse document.body.addEventListener('mousedown', () => { document.body.classList.add('using-mouse'); }); // Re-enable focus styling when Tab is pressed by removing the class using-mouse document.body.addEventListener('keydown', (e) => { if (e.keyCode === 9) { document.body.classList.remove('using-mouse'); } });`
+```javascript
+// Remove focus styling from the body by adding the class using-mouse
+document.body.addEventListener('mousedown', () => {
+  document.body.classList.add('using-mouse');
+});
+
+// Re-enable focus styling when Tab is pressed by removing the class using-mouse
+document.body.addEventListener('keydown', (e) => {
+  if (e.keyCode === 9) {
+    document.body.classList.remove('using-mouse');
+  }
+});
+```
 
 GatsbyJS:
 
 For Gatsby things get a bit more complicated. Since Gatsby is a static site generator we need to make sure that we can put this tiny script in all of our pages. Gatsby builds the pages in a node environment so there is no window object for us to addEventListener to. To get around this we must add the JS script into gatsby-browser.js file inside the onClientEntry API. onClientEntry is called when the Gatsby browser runtime first starts so it'll load as soon as your page loads for every page.
 
-`// Requiere the global css where you have the focus styles require('./src/styles/global.css'); exports.onClientEntry = () => { // Remove focus styling from the body by adding the class using-mouse document.body.addEventListener('mousedown', () => { document.body.classList.add('using-mouse'); }); // Re-enable focus styling when Tab is pressed by removing the class using-mouse document.body.addEventListener('keydown', (e) => { if (e.keyCode === 9) { document.body.classList.remove('using-mouse'); } }); };`
+```javascript
+// Requiere the global css where you have the focus styles
+require('./src/styles/global.css');
 
-This is a slick way of making your site accessible. While you also might not want focus to go completely away on certain elements you can always just override the css styles for those certain elements like \<input /> and \<textarea/>.
+exports.onClientEntry = () => {
+  // Remove focus styling from the body by adding the class using-mouse
+  document.body.addEventListener('mousedown', () => {
+    document.body.classList.add('using-mouse');
+  });
+
+  // Re-enable focus styling when Tab is pressed by removing the class using-mouse
+  document.body.addEventListener('keydown', (e) => {
+    if (e.keyCode === 9) {
+      document.body.classList.remove('using-mouse');
+    }
+  });
+};
+```
+
+This is a slick way of making your site accessible. While you also might not want focus to go completely away on certain elements you can always just override the css styles for those certain elements like `<input />` and `<textarea />`.
