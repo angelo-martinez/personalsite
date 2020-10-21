@@ -4,15 +4,16 @@
 
 .sticky {
   padding: 32px 25px;
+  background-color: $blue;
 
-  @media (max-width: $sm-max) {
-    background-color: $blue;
-  }
+  // @media (max-width: $sm-max) {
+  //   background-color: $blue;
+  // }
 
-  @media (min-width: $md-min) {
-    position: sticky;
-    top: 0;
-  }
+  // @media (min-width: $md-min) {
+  //   position: sticky;
+  //   top: 0;
+  // }
 }
 
 .intro {

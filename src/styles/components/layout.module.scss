@@ -1,15 +1,15 @@
 .wrapper {
   width: 100%;
   min-height: 100vh;
-  display: grid;
+  // display: grid;
 
-  @media (max-width: $sm-max) {
-    grid-auto-rows: min-content;
-  }
+  // @media (max-width: $sm-max) {
+  //   grid-auto-rows: min-content;
+  // }
 
-  @media (min-width: $md-min) {
-    grid-template-columns: 300px auto;
-  }
+  // @media (min-width: $md-min) {
+  //   grid-template-columns: 300px auto;
+  // }
 }
 
 .main {
