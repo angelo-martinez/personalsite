@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
 import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
 import SEO from '../components/seo';
 import Layout from '../components/layout';
 import Content, { HTMLContent } from '../components/content';
@@ -14,6 +15,7 @@ export const BlogPostTemplate = ({
   collections,
   title,
   seo,
+  headerImage,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -22,6 +24,7 @@ export const BlogPostTemplate = ({
       {seo || ''}
       <div className="container">
         <h1 className={styles.title}>{title}</h1>
+        <Img fluid={headerImage} className={styles.img} />
         <PostContent content={content} className={styles.content} />
         {collections && collections.length ? (
           <div style={{ marginTop: `4rem` }}>
@@ -67,6 +70,7 @@ const BlogPost = ({ data }) => {
         }
         collections={post.frontmatter.collections}
         title={post.frontmatter.title}
+        headerImage={post.frontmatter.headerImage.childImageSharp.fluid}
       />
     </Layout>
   );
@@ -90,6 +94,13 @@ export const pageQuery = graphql`
         title
         description
         collections
+        headerImage {
+          childImageSharp {
+            fluid(maxWidth: 530) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
     }
   }

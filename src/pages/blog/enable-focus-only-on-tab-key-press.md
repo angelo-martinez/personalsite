@@ -5,7 +5,8 @@ title: How to enable :focus only on tab key press with vanilla JS and GatsbyJS.
 date: 2020-08-19T00:26:47.997Z
 description: How to add focus to your web apps for keyboard only users and
   remove it for mouse users.
-featuredimage: /images/js-gatsby.jpg
+featuredImage: /images/js-gatsby.jpg
+headerImage: /images/js-gatsby-header.jpg
 collections:
   - gatsbyjs
   - javascript
