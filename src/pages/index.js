@@ -31,6 +31,12 @@ const IndexPage = ({ data }) => {
         </article>
         <section className={styles.grid}>
           <Card
+            img={data.digImg.childImageSharp.fluid}
+            name="My Surgery Recovery"
+            stack="ReactJs | SCSS | Firebase"
+            link="https://github.com/SparkDevTeams/Fall-2020-DIG"
+          />
+          <Card
             img={data.msrImg.childImageSharp.fluid}
             name="My Surgery Recovery"
             stack="GatsbyJs | CSS Modules"
@@ -46,7 +52,7 @@ const IndexPage = ({ data }) => {
           <Card
             img={data.spaceImg.childImageSharp.fluid}
             name="Space Invaders"
-            stack="vanillaJS | HTML | CSS"
+            stack="JavaScript | HTML | CSS"
             link="https://github.com/angelo-martinez/space-invaders"
           />
           <Card
@@ -63,6 +69,13 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query {
+    digImg: file(relativePath: { eq: "dig.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 620, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
     msrImg: file(relativePath: { eq: "msr.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 620, quality: 100) {
