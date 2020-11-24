@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
         <section className={styles.grid}>
           <Card
             img={data.digImg.childImageSharp.fluid}
-            name="My Surgery Recovery"
+            name="Dream In Green"
             stack="ReactJs | SCSS | Firebase"
             link="https://github.com/SparkDevTeams/Fall-2020-DIG"
           />
